@@ -5,6 +5,7 @@
   <title>Tech-Silence - Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -17,12 +18,25 @@
   <div class="main">
     <div class="header">Dashboard</div>
 
+    <div class="card">
+      <h3>Registrar Dados</h3>
+      <input type="text" id="nome" placeholder="Nome">
+      <input type="number" id="valor" placeholder="Valor">
+      <select id="status">
+        <option value="Ativo">Ativo</option>
+        <option value="Inativo">Inativo</option>
+      </select>
+      <button onclick="registrar()">Registrar</button>
+    </div>
+
     <div id="lista-dados"></div>
 
-    <canvas id="meuGrafico"></canvas>
+    <button onclick="gerarRelatorio()">Gerar Relatório</button>
+    <pre id="relatorio"></pre>
+
+    <canvas id="meuGrafico" width="300" height="150"></canvas>
   </div>
 
   <script src="js/script.js"></script>
 </body>
 </html>
-
